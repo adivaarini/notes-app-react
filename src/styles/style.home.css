@@ -1,0 +1,237 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "cursive";
+    background-color: #202124;
+    color: white;
+}
+
+input,
+textarea {
+    padding: 12px;
+    margin: 12px 0;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-family: "cursive";
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+    font-weight: bold;
+}
+
+.all-page {
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 32px;
+}
+
+.title-all-page {
+    margin-bottom: 8px;
+    font-size: 48px;
+    word-wrap: break-word;
+}
+
+.date-all-page {
+    color: var(--on-background-grey);
+}
+
+.body-all-page {
+    line-height: 1.5;
+    margin-top: 36px;
+    font-size: 18px;
+}
+
+.action-all-page,
+.action-homepage,
+.action-new-notes {
+    gap: 16px;
+    bottom: 32px;
+    right: 32px;
+    position: fixed;
+    display: flex;
+}
+
+.action {
+    width: 50px;
+    height: 50px;
+    background-color: var(--on-background);
+    color: var(--background);
+    border: 0px;
+    border-radius: 50px;
+    padding: 8px;
+    font-size: 32px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.note-app__header {
+    padding: 4px 16px;
+    border-bottom: 1px solid #aaa;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.note-app__header h1 {
+    margin: 8px 0px;
+    color: white;
+    flex: 1;
+}
+
+.note-app__body {
+    max-width: 1000px;
+    margin: 16px auto;
+    padding: 12px;
+}
+
+.note-app__body h2 {
+    margin: 16px 0px;
+    font-weight: normal;
+}
+
+.note-input {
+    max-width: 500px;
+    margin: 0px auto;
+    margin-bottom: 48px;
+}
+
+.note-input input,
+.note-input textarea {
+    width: 100%;
+    display: block;
+}
+
+.note-input__title {
+    font-weight: bold;
+}
+
+.note-input__title__char-limit {
+    color: #aaa;
+    font-size: 14px;
+    text-align: right;
+}
+
+.note-input__body {
+    min-height: 175px;
+}
+
+.note-input button {
+    width: 100%;
+    padding: 8px;
+    background-color: transparent;
+    font-family: "Inter", sans-serif;
+    color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-weight: bold;
+    display: block;
+    cursor: pointer;
+}
+
+.list-note {
+    margin-bottom: 48px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(min-content, max-content);
+    gap: 16px;
+    display: grid;
+}
+
+.list-note__empty-message {
+    color: #aaa;
+    text-align: center;
+}
+
+.content-note {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+}
+
+.content-note-content {
+    padding: 12px;
+    flex: 1;
+}
+
+.title-content-note {
+    margin-bottom: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.date-content-note {
+    margin-bottom: 8px;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.body-content-note {
+    font-size: 14px;
+}
+
+.content-note__action {
+    display: flex;
+}
+
+.content-note__delete-button,
+.content-note__archive-button {
+    width: 100%;
+    padding: 8px 0px;
+    background-color: transparent;
+    border: 0px;
+    border-top: 1px solid #aaa;
+    font-family: "cursive";
+    font-weight: bold;
+    display: block;
+    cursor: pointer;
+}
+
+.content-note__delete-button {
+    border-right: 1px solid #aaa;
+    color: #ff5f52;
+}
+
+.content-note__archive-button {
+    color: #fff263;
+}
+
+.content-note__archive-button:hover {
+    color: #c49000;
+}
+
+.content-note-button:hover {
+    color: #b00020;
+}
+
+@media only screen and (min-width: 500px) {
+    .list-note {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .list-note {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .note-search input {
+        min-width: 400px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .list-note {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
